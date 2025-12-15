@@ -1,7 +1,12 @@
 # Write a Python program to calculate the area of a rectangle given its length and width
 
 
-l=int(input("enter length of rectangle :"))
-w=int(input("enter width of rectangle :"))
-Area = l*w 
-print("Area of rectangle is : " , Area)
+try:
+    length = int(input("Enter length of rectangle: "))
+    width = int(input("Enter width of rectangle: "))
+
+    area = length * width
+    print("area of rectangle is: ", area)
+
+except ValueError:
+    print("invalid input ,please enter numeric values only")

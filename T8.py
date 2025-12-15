@@ -1,10 +1,18 @@
 # Given a list of integers, find the sum of all positive numbers
 
-list=[1,2,-3,-4,5,6,-7,8,9,-10,-11,12,13,14,-15]
-sum=0
-for i in list:
-    if i>=0:
-        sum+=i
+try:
+    elements=int(input("enter number of element you want to add : "))
+    list=[]
+    sum=0
+    for i in range(elements):
+        value=int(input("enter a element :"))
+        list.append(value)
+
     else:
-        continue
-print(sum)
+        for i in list:
+            if i>=0:
+                sum+=i
+        
+        print(sum)
+except  ValueError:
+    print("invalid input ,please enter integer input only")

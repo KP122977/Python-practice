@@ -3,23 +3,23 @@
 # using loop
 
 def palindrome(s):
-    s = s.lower().replace(" ", "")
+    s = s.lower()
     rev = ""
     for char in s:
         rev = char + rev   
 
     return s == rev
 
-print(palindrome("krish"))
+print(palindrome('krish'))
 print(palindrome("madam"))
 
 # using slicing
 
 def palindrome(s):
-    s=s.lower().replace(" ","")
+    s=s.lower()
     rev=s[::-1]
     if s==rev:
-        print("given string in palindrome")
+        print("given string is palindrome")
     else:
         print("given string is not palindrome")
 
