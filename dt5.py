@@ -107,3 +107,57 @@ def outer():
     print(x)
 
 outer()
+
+
+def add_us(a, b):
+    c = a + b
+    return c
+
+a = float(input())
+b = float(input())
+
+ans=add_us(a, b)
+
+print(ans)
+
+def demo():
+    print("hello")
+print(demo())
+
+def demo():
+    return 'hello'
+print(demo())
+
+
+def function(x, y,z,a):
+      print(x, y, z,a)
+function(5,3,3,a=3)
+
+
+def demo(a, *args, b=10, **kwargs):
+    print("a =", a)
+    print("args =", args)
+    print("b =", b)
+    print("kwargs =", kwargs)
+demo(1,3,4,5,b=6,c=7,d=8)
+print(print(print((print()))))
+
+
+
+dict={'1':'krish' , '2':'tanish','3':'paraj'}
+for key, value in dict.items():
+    print(f"{key} = {value}")
+else:
+    print("complete dict printed")
+    
+    
+pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+pairs.sort(key=lambda pair: pair[1])
+print(f"sorted pairs: {pairs}")
+
+pairs = {1:'one', 2:'two', 3:'three', 4:'four'}
+pairs=sorted(pairs.items(),key=lambda pair: pair[1])
+print(f"sorted pairs: {pairs}")
+
+get_value = lambda d, k: d.get(k)
+print(get_value({1: 1, 2: 2}, 2))  
