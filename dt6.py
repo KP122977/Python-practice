@@ -63,3 +63,20 @@ except* SystemError as e:
     print("There were SystemErrors")
 
 
+
+try:
+    pass
+    raise KeyboardInterrupt
+
+except KeyError:
+    print("exception was raised")
+
+finally:
+    print('Goodbye, world!')
+
+age=11
+try:
+    if age < 18:
+        raise Exception("Underage")
+except Exception:
+    print("Not allowed")

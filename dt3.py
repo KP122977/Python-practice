@@ -56,92 +56,112 @@
 # print (a == b)
 
 
-a_list = [34,  'sdg', '#dfs', '100', 407]
-b_list = [1, '#dfs', 'python', 'sdg', 407, 34]
+# a_list = [34,  'sdg', '#dfs', '100', 407]
+# b_list = [1, '#dfs', 'python', 'sdg', 407, 34]
 
-# checking 34
-print(f"a_list[0] is b_list[5]: {a_list[0] is b_list[5]}")
+# # checking 34
+# print(f"a_list[0] is b_list[5]: {a_list[0] is b_list[5]}")
 
-# checking sdg
-print(f"a_list[1] is b_list[3]: {a_list[1] is b_list[3]}")
+# # checking sdg
+# print(f"a_list[1] is b_list[3]: {a_list[1] is b_list[3]}")
 
-# checking #dfs
-print(f"a_list[2] is b_list[1]: {a_list[2] is b_list[1]}")
+# # checking #dfs
+# print(f"a_list[2] is b_list[1]: {a_list[2] is b_list[1]}")
 
-# checking 407
-print(f"a_list[4] is b_list[4]: {a_list[4] is b_list[4]}")
+# # checking 407
+# print(f"a_list[4] is b_list[4]: {a_list[4] is b_list[4]}")
 
-a = 407
-b = 407
+# a = 407
+# b = 407
 
-print(a == b)   # True
-print(a is b)   # may be True (optimization)
+# print(a == b)   # True
+# print(a is b)   # may be True (optimization)
 
-a = int("407")
-b = int("407")
+# a = int("407")
+# b = int("407")
 
-print(a == b)   # True
-print(a is b)   # ❌ False
-
-
-
-a=256
-b=256
-print(a is b)
-
-a=257
-b=257
-print(a is b)
+# print(a == b)   # True
+# print(a is b)   # ❌ False
 
 
-a = []
-b = []
-print(a is b)
 
-a = ()
-b = ()
-print(a is b)
-print(type(a))
+# a=256
+# b=256
+# print(a is b)
+
+# a=257
+# b=257
+# print(a is b)
 
 
-a = []
-b = []
+# a = []
+# b = []
+# print(a is b)
 
-print("a is b:", a is b)
-print("id(a):", id(a))
-print("id(b):", id(b))
+# a = ()
+# b = ()
+# print(a is b)
+# print(type(a))
 
-a.append(100)
 
-print("After modifying a:")
-print("a:", a)
-print("b:", b)
+# a = []
+# b = []
+
+# print("a is b:", a is b)
+# print("id(a):", id(a))
+# print("id(b):", id(b))
+
+# a.append(100)
+
+# print("After modifying a:")
+# print("a:", a)
+# print("b:", b)
 
 a = tuple()
 b = a
+print(id(a))
+print(id(b))
 
 a = a + (10,)
-
+print(id(a))
+print(id(b))
 print("a:", a)
 print("b:", b)
 
 
 
 
-a = "hello world b hghggf gf gf zxcvbnmasdfghjklqwertyuiop!"
-b = "hello world b hghggf gf gfczxcvbnmasdfghjklqwertyuiop!"
+# a = "hello world b hghggf gf gf zxcvbnmasdfghjklqwertyuiop!"
+# b = "hello world b hghggf gf gfczxcvbnmasdfghjklqwertyuiop!"
+# print(id(a))
+# print(id(b))
+
+
+# krish=400
+# print(id(krish))
+# krish+=100
+# print(krish)
+# print(id(krish))
+
+# k=[400]
+# print(id(k))
+# k.append(100)
+# print(k)
+# print(id(k))
+
+
+a=[1,2,3,4]
+b=a
 print(id(a))
 print(id(b))
+a.append(5)
+a.append(6)
+a.append(7)
+print(a)
+print(b)
 
 
-krish=400
-print(id(krish))
-krish+=100
-print(krish)
-print(id(krish))
-
-k=[400]
-print(id(k))
-k.append(100)
-print(k)
-print(id(k))
+a=1
+b=a
+print(id(a))
+print(id(b))
