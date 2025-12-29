@@ -173,3 +173,73 @@ print(Employee.is_weekend(my_date))
 #         return self.l * self.w
 # r = Rectangle(4, 5)
 # print(r.area)
+
+
+
+# class YoungTalent:
+
+#     abilities = ['Kick out bad guys']
+#     power = 100
+
+#     def __init__(self, name, email, god_father):
+#         self.name = name
+#         self.email = email
+#         self.god_father = god_father
+
+#     def add_ability(self, ability):
+#         self.abilities.append(ability)
+# #         self.abilities = [ability]
+
+#     def change_power(self, power):
+        
+#         self.power = power
+        
+        
+# @classmethod
+# def change_power(cls, power):
+#         cls.power = power
+        
+
+# YoungTalent.change_power(200)
+
+
+# YoungTalent.power = 200
+
+class Employee:
+
+    num_of_emps = 0          # Always same for all the instances of class
+    raise_amount = 1.04      # May differ from employee to employee
+
+    def __init__(self, first_name, last_name, salary):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.salary = salary
+        self.email = first_name + '.' + last_name + "@reversebits.com"
+
+        Employee.num_of_emps +=  1
+
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name} "
+
+    def apply_raise(self):
+        print(f"Raising the salary with amount: {self.raise_amount}")
+        self.salary = int(self.salary*self.raise_amount)
+
+    @classmethod
+    def set_raise_amount(cls, amount):
+        cls.raise_amount = amount
+        
+
+    @classmethod
+    def from_string(cls, string):
+        first_name, last_name, salary = string.split('-')
+        return cls(first_name, last_name, int(salary))
+
+    @staticmethod
+    def is_weekend(day):
+        return day.weekday() == 5 or day.weekday() == 6
+    
+a=Employee('krish','patel',6000)
+a.from_string('krish-patel-6000')
+print(a.full_name())

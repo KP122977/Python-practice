@@ -134,29 +134,64 @@
 
 #  decorators
 
-def null_decorator(func):
-    return func
+# def null_decorator(func):
+#     return func
 
-@null_decorator
-def greet():
-    return 'Hello!'
+# @null_decorator
+# def greet():
+#     return 'Hello!'
 
-print(greet())
+# print(greet())
 
 
-def strong(func):
+# def strong(func):
+#     def wrapper():
+#         return '<strong>' + func() + '</strong>'
+#     return wrapper
+
+# def emphasis(func):
+#     def wrapper():
+#         return '<em>' + func() + '</em>'
+#     return wrapper
+
+# @strong
+# @emphasis
+# def greet():
+#     return 'Hello!'
+
+# print(greet())
+
+# import logging
+# try:
+#     1 / 0
+# except Exception:
+#     logging.exception("An error occurred")
+
+
+
+import functools
+
+# def uppercase(cham):
+#     @functools.wraps(cham)
+#     def wrapper():
+#         return cham().upper()
+#     return wrapper
+
+# @uppercase
+# def greet():
+#     """return a greet func"""
+#     return 'hello!'
+
+# print(greet())
+# print(greet.__name__)
+
+def decor(func):
     def wrapper():
-        return '<strong>' + func() + '</strong>'
+        print(func())
+        return 'hii'
     return wrapper
+@decor
+def tips():
+    return 'hello'
 
-def emphasis(func):
-    def wrapper():
-        return '<em>' + func() + '</em>'
-    return wrapper
-
-@strong
-@emphasis
-def greet():
-    return 'Hello!'
-
-print(greet())
+print(tips())
